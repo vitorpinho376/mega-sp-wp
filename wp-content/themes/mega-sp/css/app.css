@@ -1,0 +1,542 @@
+
+/* Global Styles */
+
+body { font-family: franklin-gothic-urw, sans-serif; font-style: normal; font-smooth: always; }
+.custom-nav-fix { overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+b { font-weight: 700; }
+a { text-decoration: none !important; }
+a, button, .icon, .object-card-holder, .nav-imoveis::after, .msp-nav-card, .nav-negocios::after, .nav-imoveis, .nav-negocios { transition: all .6s ease; }
+.mob { display: none; }
+.form-group br { display: none !important; }
+
+/* Icons */
+
+@font-face {
+  font-family: 'msp-icons';
+  src:  url('../icons/msp-icons.eot?mqlwr9');
+  src:  url('../icons/msp-icons.eot?mqlwr9#iefix') format('embedded-opentype'),
+    url('../icons/msp-icons.ttf?mqlwr9') format('truetype'),
+    url('../icons/msp-icons.woff?mqlwr9') format('woff'),
+    url('../icons/msp-icons.svg?mqlwr9#msp-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'msp-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-error:before {
+  content: "\e902";
+}
+.icon-mobilia:before {
+  content: "\e903";
+}
+.icon-funcionarios:before {
+  content: "\e904";
+}
+.icon-dividas:before {
+  content: "\e905";
+}
+.icon-business:before {
+  content: "\e906";
+}
+.icon-faturamento:before {
+  content: "\e907";
+}
+.icon-inauguracao:before {
+  content: "\e908";
+}
+.icon-bathroom:before {
+  content: "\e909";
+}
+.icon-bedroom:before {
+  content: "\e90a";
+}
+.icon-phone:before {
+  content: "\e90b";
+}
+.icon-check:before {
+  content: "\e90c";
+}
+.icon-dimensions:before {
+  content: "\e90d";
+}
+.icon-close:before {
+  content: "\e90e";
+}
+.icon-whatsapp:before {
+  content: "\e90f";
+}
+.icon-dot:before {
+  content: "\e910";
+}
+.icon-location:before {
+  content: "\e911";
+}
+.icon-arrow-bottom:before {
+  content: "\e912";
+}
+.icon-arrow-up:before {
+  content: "\e913";
+}
+.icon-arrow-right:before {
+  content: "\e914";
+}
+.icon-arrow-left:before {
+  content: "\e915";
+}
+.icon-menu:before {
+  content: "\e916";
+}
+
+/* Type */
+
+.imoveis-type { color: #F66F67; }
+.negocios-type { color: #2C6EE1; }
+
+.location-tag .icon.imoveis-type { color: rgba(246, 111, 103, .7); vertical-align: middle; margin-right: 8px; }
+.location-tag .icon.negocios-type { color: rgba(44, 110, 225, .7); vertical-align: middle; margin-right: 8px; }
+
+.business-tag { margin: 24px 0 8px; }
+.business-type { margin-left: 8px; font-weight: 700; font-size: 16px; color: #293956; letter-spacing: -0.26px; }
+
+.headline-white { font-weight: 700; font-size: 32px; color: #FFFFFF; letter-spacing: 0;  line-height: 40px; }
+.headline-p-white { font-weight: 400; font-size: 18px; color: rgba(255, 255, 255, .8); line-height: 24px; }
+
+.heading-white { font-weight: 400; font-size: 56px; color: #FFFFFF; line-height: 64px; }
+.main-p-white { font-weight: 400; font-size: 24px; color: #FFFFFF; line-height: 24px; }
+.featured-heading { font-weight: 400; font-size: 56px; color: #293956; letter-spacing: 0; line-height: 64px; }
+.main-page-title { font-weight: 400; font-size: 48px; color: #293956; letter-spacing: 0; }
+.alert-heading { font-weight: 700; font-size: 48px; color: #293956; letter-spacing: -0.77px; }
+.main-p { font-weight: 400; font-size: 18px; color: #61718D; letter-spacing: 0; }
+
+.address-span { font-weight: 400; font-size: 16px; }
+.card-title-tag { font-weight: 400; font-size: 24px; color: #293956; letter-spacing: -0.29px; }
+.card-featured-span { font-weight: 700; font-size: 18px; letter-spacing: -0.29px; text-align: right; }
+.card-normal-span { font-weight: 400; font-size: 18px; color: #61718D; letter-spacing: -0.29px; text-align: right; }
+
+.modal-title { font-weight: 700; font-size: 24px; color: #293956; letter-spacing: -0.38px; }
+.modal-copy { font-weight: 400; font-size: 16px; color: rgba(41,57,86,0.56); letter-spacing: 0; }
+
+.block-content-heading { font-weight: 700; font-size: 32px; color: #293956; letter-spacing: 0; line-height: 32px; }
+.block-content-p { font-weight: 400; font-size: 18px; color: #293956; letter-spacing: 0; line-height: 32px; }
+
+.neutral-content-title { font-weight: 700; font-size: 16px; color: #293956; letter-spacing: -0.26px; }
+.neutral-content-p { font-weight: 400; font-size: 16px; color: rgba(41,57,86,0.56); letter-spacing: 0; }
+.reference { font-weight: 700; font-size: 16px; color: #61718D; }
+
+.signature { display: block; font-weight: 400; font-size: 24px; color: #B0B7C4; letter-spacing: 0; }
+.creci-span { text-transform: uppercase; font-weight: 400; font-size: 18px; color: #B0B7C4; letter-spacing: 0; }
+.footer-tagline { font-weight: 400; font-size: 24px; color: #B0B7C4; }
+.footer-address, .footer-phone { font-size: 16px; color: #B0B7C4; }
+.footer-phone { display: block; margin: 8px 0; }
+
+.price { font-weight: 600; font-size: 32px; }
+.mensalidade { font-weight: 400; font-size: 16px; opacity: .8; }
+.microcopy { font-size: 14px; color: rgba(44,57,87,.8); }
+.page-info { margin: 16px 0; padding: 16px; background: #FFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08)}
+.page-info h5 { font-size: 20px; }
+
+.topic-block .icon { font-size: 24px; display: block; }
+.topic-block .icon.neutral { color: #B0B7C4; }
+.topic-type { font-weight: 700; font-size: 16px; color: rgba(41,57,86,0.56); letter-spacing: -0.26px; text-align: center; }
+
+/* Actionables */
+
+.btn { line-height: 56px; padding: 0 40px; font-size: 18px; font-weight: 400; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08); border-radius: 6px; }
+.btn:hover { box-shadow: 0 2px 4px 0 rgba(0,0,0,0); }
+
+.neutral-btn { background-color: #FFF; color: #61718D; }
+.neutral-btn:hover { background: #F3F3F3; color: #293956; }
+.primary-btn { background-color: #293956; color: #FFF; }
+.primary-btn:hover { background: #1B263A; color: #FFF; }
+.imoveis-btn { background-color: #F66F67; color: #FFF; }
+.imoveis-btn:hover { background: #CC5952; color: #FFF; }
+.negocios-btn { background-color: #2C6EE1; color: #FFF; }
+.negocios-btn:hover { background: #1E4FA4; color: #FFF; }
+.whatsapp-btn { background-color: #25D366; color: #FFF; }
+.whatsapp-btn:hover { background: #1BA24D; color: #FFF; }
+.ghost-btn { background: rgba(255,255,255,0.16); color: #FFF; }
+.ghost-btn:hover { background: rgba(255,255,255,1); color: #293956; }
+
+.breadcrumb-holder { padding: 16px 0; }
+.breadcrumb-normal { font-weight: 400; font-size: 18px; color: #61718D; letter-spacing: 0; }
+.breadcrumb-normal:hover { color: rgba(97,113,141,0.50); }
+.breadcrumb-normal.active { color: #B0B7C4; pointer-events: none; }
+.bc-arrow { font-size: 8px; color: #B0B7C4; margin: 0 8px; vertical-align: middle; }
+
+.neutral-link { font-weight: 700; font-size: 18px; color: #61718D; letter-spacing: 0; line-height: 24px; }
+.neutral-link:hover { color: rgba(97,113,141,0.56); }
+.close .icon { font-size: 18px; background: rgba(97,113,141,1); }
+.close:hover .icon { background: rgba(97,113,141,0.56); }
+
+.full-anchor { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 6; }
+
+.sm-social { font-size: 24px; color: #B0B7C4; }
+.sm-social:hover { color: #61718D; }
+
+.white-link { font-weight: 700; font-size: 16px; color: rgba(255,255,255,1); }
+.white-link .icon { color: rgba(255,255,255,.5); margin-right: 8px; vertical-align: middle; }
+.white-link:hover { color: rgba(255,255,255,.5); }
+
+/* Main-Nav */
+
+.main-header { line-height: 80px; padding: 20px 5%; background-color: #FFF; }
+.brand-holder .main-logo { margin-right: 40px; }
+.brand-holder .main-logo img { width: 150px; height: auto; }
+.brand-holder .neutral-link { margin-right: 24px; }
+header .btn { margin-left: 16px; }
+
+.floating-header { position: absolute; top: 0; width: 100%; z-index: 5; background: transparent; }
+.neutral-header { width: 100%; position: absolute; top: 0; z-index: 6; background-color: rgba(255, 255, 255, 0); line-height: 80px; padding: 20px 0; }
+
+.custom-header { width: 100%; position: absolute; top: 0; z-index: 6; background-color: rgba(255, 255, 255, 1); line-height: 64px; padding: 20px 0; }
+.custom-header .main-logo img { width: 64px; height: auto; }
+.form-search-holder { width: 80%; }
+.form-search-holder input { width: 100%; }
+
+.header-action-holder { display: flex; width: 100%; }
+
+.nav-pill-holder .custom-pill { margin-right: 16px; }
+.custom-pill { line-height: 56px; border: 3px solid rgba(255,255,255,0); background-color: #FFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.07); border-radius: 5px; padding: 16px 40px; font-size: 18px; color: #61718D; text-align: center; }
+.custom-pill.imoveis-pill:hover { color: #F66F67; background: #FEF2F2; border-radius: 5px; }
+.custom-pill.imoveis-pill.active { background-color: #FEF2F2; border: 3px solid rgba(246,111,103,1); color: rgba(246,111,103,1); }
+.custom-pill.negocios-pill:hover { color: #2C6EE1; background: #EEF4FD; border-radius: 5px; }
+.custom-pill.negocios-pill.active { background-color: #EEF4FD; border: 3px solid rgba(44,110,225,1); color: rgba(44,110,225,1); }
+
+/* Forms */
+
+label { display: block; font-weight: 700; font-size: 18px; margin-bottom: 16px; color: #293956; letter-spacing: 0; line-height: 24px; }
+.form-control { padding: 26px 16px; font-size: 18px; border: 2px solid rgba(255, 255, 255, 0); background: #FFFFFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.07); border-radius: 5px; font-weight: 700; color: #293956; }
+.form-control::placeholder { font-weight: 400; color: #B1B7C5; }
+.form-control:disabled { font-weight: 400; background: rgba(217,220,224,0.19); box-shadow: 0 2px 4px 0 rgba(0,0,0,0.07); }
+.form-control.disabled::placeholder { color: #293956 !important; }
+.search-form { display: flex; width: 100%; align-items: stretch; align-content: flex-start;  }
+.search-form .form-group { margin: 0 16px; flex-grow: 2; }
+.search-form .action-holder .btn { width: 100%; }
+
+.nav-pill-holder.nav { display: block; }
+
+/* Custom Nav Hero */
+
+.custom-nav-hero { width: 120%; margin-left: -10%; }
+
+.nav-hero-item { border: 16px solid #FFF; display: flex; height: 900px; position: relative; align-items: center; justify-content: center; }
+.nav-hero-item .content-block { transform: skewX(-10deg); text-align: center; position: absolute; z-index: 5; width: 400px; height: 400px; }
+.nav-hero-item .image-holder { margin: 24px auto; }
+.nav-hero-item .image-holder img { width: 200px; height: auto; }
+
+.nav-imoveis:hover { margin-left: 3%; }
+.nav-negocios:hover { margin-right: 3%; }
+
+.nav-imoveis:hover::after { background: rgba(246,111,103,0.9); }
+.nav-negocios:hover::after { background: rgba(44,110,225,0.9); }
+
+/* Section Hero */
+
+.section-hero { display: block; position: relative; height: 600px; width: 100%; margin-bottom: 80px; }
+.section-hero .container, .section-hero .row { height: 100%; }
+.section-hero h1 { margin-bottom: 16px; }
+
+.section-hero-grid { display: flex; height: 100%; position: relative; align-items: center; justify-content: center;  }
+.section-hero-content { text-align: center; position: absolute; z-index: 5; width: 100%; }
+.section-logo { width: 100px; height: auto; margin-bottom: 24px; }
+
+.filter-holder { z-index: 8; position: absolute; bottom: -15%; width: 100%; border-radius: 12px; padding: 24px; background: rgba(255,255,255,0.93); box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); }
+.span-tag { margin-bottom: 24px; text-align: center; border-radius: 8px; }
+.span-tag h2 { font-size: 20px; line-height: 56px; }
+.imoveis-filter .span-tag { background: rgba(246,111,103,0.08); }
+.imoveis-filter .span-tag h2 { color: #F66F67; }
+
+.negocios-filter .span-tag { background: rgba(44,110,225,0.08); }
+.negocios-filter .span-tag h2 { color: #2C6EE1; }
+
+.card-section { padding: 48px 0; }
+.object-card-holder { width: 100%; height: 100%; position: relative; padding: 24px; background: #FFFFFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); border-radius: 12px; }
+.object-card-holder .image-holder { display: flex; justify-content: center; align-items: center; text-align: center; width: 100%; height: 300px; overflow: hidden; border-radius: 12px; position: relative; }
+.object-card-holder .image-holder::before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 43%, rgba(0,0,0,0.37) 100%); }
+.object-card-holder .image-holder img { margin: 0 auto; height: 100%; width: auto; }
+.object-card-holder h3 { margin: 16px 0 8px; }
+
+.object-card-holder:hover { transform: scale(0.94); box-shadow: 0 4px 6px 0 rgba(0,0,0,0.16); }
+
+.section-title-block { margin-bottom: 20px; }
+.section-title-block h2 { font-weight: 700; font-size: 40px; color: #293956; line-height: 64px; }
+.section-title-block h2, .section-title-block .btn { vertical-align: middle; display: inline-block;}
+
+/* Footer */
+
+footer { background-color: #F8F8F9; padding: 90px 5%; }
+.brand-footer img { width: 100px; height: auto; margin-bottom: 24px; }
+.brand-footer { max-width: 500px; margin-bottom: 24px; }
+.social-grid { margin-bottom: 24px; }
+.social-grid a { margin-right: 24px; }
+.link-grid a { display: block; margin-bottom: 16px; }
+.imoveis-links img, .negocios-links img { margin-bottom: 24px; width: 80px; height: auto; }
+
+.photo-holder-carousel { margin-bottom: 24px; overflow-x: scroll; width: 100%; padding: 16px 0; }
+.photo-container { min-width: max-content; display: block; }
+.photo-view-object { display: inline-block; margin-right: 16px; width: 360px; height: 360px; }
+.photo-container .photo-view-object:last-child { margin: 0; }
+.photo-image-holder { display: flex; justify-content: center; width: 360px; height: 360px; align-items: center; text-align: center; overflow: hidden; border-radius: 12px; }
+.photo-image-holder img { height: 100%; }
+
+
+/* Page Styles */
+
+.page-bg { background: #FBFCFD; }
+.page-section { padding: 104px 0; }
+.page-content { padding: 24px; background: #FFFFFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); border-radius: 16px; }
+.topic-block-holder { display: flex; margin: 24px 0; }
+.topic-block { margin-right: 16px; min-width: 116px; text-align: center; padding: 24px; background: #FFFFFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); border-radius: 16px; }
+.topic-block .icon { margin-bottom: 16px; }
+
+.object-info-holder { margin: 16px 0; }
+.object-info-holder .neutral-content-title { margin-bottom: 16px; }
+.object-info-holder .reference { margin-top: 24px; font-weight: 400; }
+
+.contact-card { position: sticky; top: 5%; background: #FFFFFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); border-radius: 11px; }
+.contact-card .contact-card-row { padding: 24px; border-bottom: 1px solid rgba(217,220,224,0.32); }
+
+.contact-card .action-holder { text-align: center; padding: 16px; }
+.contact-card .action-holder a { display: block; width: 100%; }
+
+.divine { position: relative; }
+
+/* Alert Styles */
+
+.success-content-holder { padding: 180px 0 140px; text-align: center; }
+.success-content { max-width: 600px; margin: 0 auto; }
+.success-content-holder img { width: 120px; height: auto; margin-bottom: 56px; }
+
+/* Modal Styles */
+
+.modal-dialog { max-width: 800px; border: 0; }
+.modal-content { border-radius: 16px; border: 0; }
+.modal-header, .modal-body { padding: 32px; }
+.modal-body .tab-navigation { padding-bottom: 16px; }
+.modal-body .tab-navigation .nav-item { margin-right: 16px; }
+.modal-body .microcopy { margin: 24px 0; }
+.modal-body .form-holder { margin: 24px 0 0; }
+.modal-body .form-holder .form-group { display: block; margin: 24px 0; }
+.modal-body .form-holder .btn { display: block; width: 100%; }
+.neutral-holder { margin-top: 24px; width: 100%; background-color: #FAFAFA; border-radius: 16px; display: flex; position: relative; align-items: center; justify-content: center; }
+.neutral-holder .featured-content { text-align: center; padding: 80px 0; }
+.neutral-holder .featured-content img { width: 120px; height: auto; }
+
+.neutral-holder .featured-content .modal-title { margin: 24px auto; width: 250px; }
+.neutral-holder .featured-content .btn { display: block; }
+.neutral-holder .featured-content .neutral-btn { margin-bottom: 16px; }
+#phone-section .icon-phone { font-size: 80px; }
+.close .icon { background: transparent; color: #B0B7C4; margin-left: 8px; vertical-align: middle; }
+.close:hover .icon { background: transparent; color: #B0B7C4; }
+.modal-header .close { padding: 0; margin: 0; vertical-align: middle; }
+.modal-header .modal-title { vertical-align: middle; }
+.modal-backdrop { background-color: transparent; background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, #000000 100%); }
+
+/* Filter Styles */
+
+.filter-section { padding-top: 120px; margin-bottom: 40px; }
+.tab-pane .object-card-holder { position: relative; }
+.filter-section .tab-pane { padding: 24px 0; }
+.type-filter .nav-item { margin: 0 16px; }
+.filter-card-block { background: rgba(255,255,255,0.93); box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); padding: 24px; border-radius: 16px; }
+.filter-section label { font-weight: 400; }
+.filter-section .action-holder .btn { display: block; width: 100%; }
+.filter-section .row { margin-top: 24px; }
+.filter-section .col-md-6 { margin-bottom: 24px; }
+.filter-block-content { margin: 0 0 24px; }
+.checkbox-group { margin: 16px 0; }
+.checkbox-group input, .checkbox-group label { display: inline-block; vertical-align: middle; line-height: 24px; }
+.checkbox-group label { margin: 0; }
+.checkbox-group input { margin-right: 8px; }
+.filter-form-group { display: flex; }
+.filter-form-group input { max-width: 48%; }
+.filter-form-group input:first-child { margin-right: 8px; }
+
+.no-results-holder { text-align: center; padding: 48px; }
+.no-results-holder h3 { margin-top: 24px; font-size: 48px; color: #293956; letter-spacing: -0.77px; text-align: center; }
+.no-results-holder p { margin: 16px 0; font-size: 18px; color: #61718D; letter-spacing: -0.29px; text-align: center; }
+.no-results-holder .icon { color: #D9DCE0; font-size: 80px; margin-bottom: 24px; }
+
+.card-section .row {
+  align-items: stretch;
+}
+
+input[type='checkbox'] {
+	margin-top: -30px;
+}
+
+input[type='checkbox'] {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	margin-right: 8px;
+	display: block;
+	float: left;
+	position: relative;
+	cursor: pointer;
+}
+
+input[type='checkbox']:after {
+	content: "";
+	vertical-align: middle;
+	text-align: center;
+	line-height: 24px;
+  border-radius: 4px;
+	position: absolute;
+	cursor: pointer;
+	height: 24px;
+	width: 24px;
+	left: 0;
+	top: 0;
+	font-size: 12px;
+  border: 1px solid #D9DCE0;
+	background: #FFF;
+}
+
+input[type='checkbox']:checked:hover:after {
+  font-family: 'msp-icons' !important;
+	content: "\e90c";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	color: #fff;
+}
+
+input[type='checkbox']:checked:after {
+  font-family: 'msp-icons' !important;
+	content: "\e90c";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	color: #fff;
+}
+
+input.imoveis-check[type='checkbox']:checked:after, input.imoveis-check[type='checkbox']:checked:hover:after  { background: #F66F67; border: 1px solid #D05952; }
+input.negocios-check[type='checkbox']:checked:after, input.negocios-check[type='checkbox']:checked:hover:after  { background: #2C6EE1; border: 1px solid #225DC3; }
+
+/* MSP Styles */
+
+.diagonal-bg { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; overflow: hidden; position: absolute; margin-left: -10%; clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%); }
+.diagonal-bg img { width: auto; height: 100%; }
+.heading-holder { margin: 80px 0; max-width: 700px; }
+.heading-holder h1 { font-weight: 700; font-size: 56px; color: #293956; letter-spacing: 0; line-height: 64px; }
+.heading-holder p { max-width: 500px; font-size: 16px; color: rgba(41,57,86,0.56); letter-spacing: -0.26px; margin-bottom: 48px; }
+.heading-holder .form-group { margin-bottom: 32px; }
+
+.success-content { text-align: center; height: 100%; padding: 32px; }
+.nav-card-holder { max-width: 700px; margin: 48px auto; padding: 64px 32px; }
+
+.msp-nav-card { position: relative; padding: 16px; margin-bottom: 24px; background: #FFFFFF; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16); border-radius: 16px; }
+.msp-nav-card .nav-card-container { display: flex; align-items: center; justify-content: center; }
+.msp-nav-card .image-holder { background: #F6F8F9; padding: 40px; border-radius: 16px; margin-right: 32px; }
+.msp-nav-card img { width: 120px; height: auto; }
+.msp-nav-card .nav-card-content { text-align: left; max-width: 400px; margin-top: 24px; }
+.msp-nav-card h2 { font-size: 32px; color: #293956; letter-spacing: 0; }
+.msp-nav-card p { font-size: 16px; color: rgba(44,57,87,0.40); letter-spacing: -0.26px; }
+.msp-nav-card .icon { color: #61718D; margin-left: 24px; margin-right: 24px; }
+
+.msp-nav-card:hover { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.16); }
+.msp-nav-card:hover .icon { opacity: .7; }
+.nav-card-holder .action-holder { margin-top: 56px; }
+
+.msp-neutral-content, .msp-content { margin: 120px 0; }
+.msp-neutral-content { text-align: center; }
+.msp-neutral-content h2 { margin-bottom: 24px; }
+.msp-neutral-content .social-grid-holder { padding-top: 24px; }
+.msp-neutral-content .social-grid-holder .sm-social { font-size: 48px; margin: 0 16px; }
+.msp-image-holder { max-width: 620px; overflow: hidden; box-shadow: 0 30px 90px 0 rgba(0,0,0,0.20); border-radius: 26px; }
+
+.holder-simple { text-align: center; }
+.holder-simple img { width: 400px; margin: 24px auto; }
+
+.status-info {
+  display: flex;
+  align-items: center;
+  line-height: 24px !important;
+  margin-bottom: 8px;
+}
+
+.status-info h4 {font-size: 16px; margin-bottom: 0; font-weight: 600; margin-right: 8px; vertical-align: middle; }
+.status-info span {font-size: 16px; font-weight: 400; vertical-align: middle; }
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+   .modal-content.mob-menu-content { background-color: #FFF; border-radius: 16px; padding: 24px; }
+   .mob-menu-nav .mob-menu-link { font-weight: 700; color: #61718D; line-height: 24px; font-size: 18px; text-align: center; display: block; margin: 32px auto;}
+   .mob-menu-nav .btn { display: block; width: 100%; }
+   .brand-holder-mob .main-logo img { width: 80px; }
+   .heading-holder { margin: 120px 0 80px; }
+   .form-holder button { display: block; width: 100%; }
+   .heading-holder h1 { font-size: 40px; }
+   .desk { display: none !important; }
+   .mob { display: block; }
+   .mob-menu { padding: 16px 24px; line-height: 32px; }
+   .main-nav-triggers { margin: 32px 0; }
+   .main-nav-triggers .container { max-width: 90%; }
+   footer .col-sm-12 { margin-bottom: 64px; }
+   footer .neutral-link { font-size: 24px; margin-bottom: 32px; }
+   footer .sm-social { font-size: 40px; }
+   .msp-nav-card .nav-card-container { display: block; text-align: center; }
+   .msp-nav-card .nav-card-content { text-align: center; margin: 24px auto; margin-bottom: 0; }
+   .msp-nav-card .image-holder { margin: 0; }
+   .msp-nav-card .icon { display: none; }
+   .filter-holder { display: none; }
+   .primary-link { opacity: .7; }
+   .primary-link .icon { vertical-align: middle; margin-right: 8px; }
+   .section-title-block { text-align: center; }
+   .section-title-block .float-right { float: none !important; width: 90% !important; margin: 16px auto; display: block !important; }
+   .section-title-block h2, .section-title-block a { display: block; }
+   .filter-section { padding: 0; }
+   .tab-navigation .nav-pills { display: flex; align-items: center; justify-content: center; }
+   .type-filter .nav-item { margin: 8px; }
+   .custom-pill { line-height: 40px; padding: 12px 20px; font-size: 16px; }
+   .filter-card-block button { display: block; width: 100%; }
+   .modal .form-search-holder { margin: 16px 0; width: 100%; }
+   .checkbox-group label { font-weight: 400; }
+   .filter-block-content { margin: 32px 0; }
+   .filter-block-content h3 { margin-bottom: 24px; font-size: 1.3rem; }
+   .page-section { padding: 32px 0; }
+   .topic-block-holder { flex-direction: column; }
+   .topic-block { min-width: auto; width: 100%; margin: 16px 0; }
+   .photo-image-holder, .photo-view-object { width: 400px; height: auto; }
+   .wpcf7-submit { display: block; width: 100%; }
+
+
+ }
